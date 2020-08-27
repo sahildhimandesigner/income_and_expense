@@ -301,6 +301,9 @@ var controller = (function(budgetCtrl, UICtrl) {
 
             // 5. Calculate and update budget
             updateBudget();
+
+            // 6. Update Percentage
+            updatePercentages();
         }
     }
 
@@ -324,6 +327,10 @@ var controller = (function(budgetCtrl, UICtrl) {
         UIController.deleteListItem(itemId)
 
         // 3. Update and show new budget
+        updateBudget();
+
+        // 4. Calculate and update percentage
+        updatePercentages();
     }
 
     //Access the setupEventListerners we return as object.
